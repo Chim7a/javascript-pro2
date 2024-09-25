@@ -39,22 +39,22 @@ console.log(capitalizeFistWord("chima paul is a big man"));
 
 // Find Maximum and Minimum
 
-function findMinAndMax(arr) {
-  let max = arr[0];
-  let min = arr[0];
+function findMinAndMax(numberCheckArr) {
+  let max = numberCheckArr[0];
+  let min = numberCheckArr[0];
 
-  for (let index = 0; index < arr.length; index++) {
-    if (arr[index] > max) {
-      max = arr[index];
+  for (let index = 0; index < numberCheckArr.length; index++) {
+    if (numberCheckArr[index] > max) {
+      max = numberCheckArr[index];
     }
-    if (arr[index] < min) {
-      min = arr[index];
+    if (numberCheckArr[index] < min) {
+      min = numberCheckArr[index];
     }
   }
 
-  return `Max number = ${max} and Min Number =${min}`;
+  return `Max age = ${max} and Min Age =${min}`;
 }
 
-const numberCheck = [-2, 3, -13, 33, 44, 312, 334, -331, 6000];
+const studentAges = [4, 45, 56, 67, 3, 6, 5, 6];
 
-console.log(findMinAndMax(numberCheck));
+console.log(findMinAndMax(studentAges));
