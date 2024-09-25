@@ -38,10 +38,23 @@ console.log(capitalizeFistWord("chima paul is a big man"));
 // Array Functions
 
 // Find Maximum and Minimum
-// const christmasEve = new Date("December 24, 1975 23:15:30");
-// const date1 = christmasEve.getDate() + " " + christmasEve.getMonth();
-// console.log(date1);
 
-//
+function findMinAndMax(arr) {
+  let max = arr[0];
+  let min = arr[0];
 
-const ages = [2, 22, 23, 3, 2, 4, 6];
+  for (let index = 0; index < arr.length; index++) {
+    if (arr[index] > max) {
+      max = arr[index];
+    }
+    if (arr[index] < min) {
+      min = arr[index];
+    }
+  }
+
+  return `Max number = ${max} and Min Number =${min}`;
+}
+
+const numberCheck = [-2, 3, -13, 33, 44, 312, 334, -331, 6000];
+
+console.log(findMinAndMax(numberCheck));
