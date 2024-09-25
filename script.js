@@ -9,15 +9,16 @@ function reverseString(stringInput) {
   return reversedText.join("");
 }
 
-console.log(reverseString("amihC"));
+console.log(reverseString("gnirts desrever A"));
 
 // Count Characters in a string
 
 const countString = (stringInput) => {
-  return stringInput.length;
+  let lengthOfString = stringInput.length;
+  return `The length of string is ${lengthOfString}`;
 };
 
-console.log(countString("Chima Ikegbulam"));
+console.log(countString("We live for the moment"));
 
 // Capitalize first letters of sentence
 
@@ -33,9 +34,11 @@ function capitalizeFistWord(textInput) {
   return newSentence.join(" ");
 }
 
-console.log(capitalizeFistWord("chima paul is a big man"));
+console.log(capitalizeFistWord("first letters are capitalized"));
 
 // Array Functions
+
+const studentAges = [4, 45, 56, 67, 3, 6, 5, 6, 5, 25];
 
 // Find Maximum and Minimum
 
@@ -52,9 +55,49 @@ function findMinAndMax(numberCheckArr) {
     }
   }
 
-  return `Max age = ${max} and Min Age =${min}`;
+  return `Max age = ${max} and Min Age = ${min}`;
 }
 
-const studentAges = [4, 45, 56, 67, 3, 6, 5, 6];
-
 console.log(findMinAndMax(studentAges));
+
+// Sum of Array
+
+function findSumOfArr(ages) {
+  let total = 0;
+  for (let index = 0; index < ages.length; index++) {
+    total += ages[index];
+  }
+  return `The sum of the student age is ${total}`;
+}
+
+console.log(findSumOfArr(studentAges));
+
+// Filter Array
+
+function studentsAbove20(userList) {
+  let filteredTeens = userList.filter((user) => user >= 20);
+  let studentsWhoCanDrink = [];
+  filteredTeens.map((olderStudent) => {
+    studentsWhoCanDrink += " " + olderStudent;
+  });
+
+  return studentsWhoCanDrink;
+}
+
+console.log(studentsAbove20(studentAges));
+
+// Mathematical Functions:
+
+// Factorial
+
+function factorial(number) {
+  if (number === 0) {
+    return 1;
+  } else {
+    return factorial(number - 1) * number;
+  }
+}
+
+console.log(factorial(5));
+
+//Prime Number Check
