@@ -103,19 +103,11 @@ console.log(factorial(6));
 //Prime Number Check
 
 function checkPrimeNumber(number) {
-  // program to check if a number is prime or not
-
-  // take input from the user
   let isPrime = true;
 
-  // check if number is equal to 1
   if (number === 1) {
     console.log("1 is neither prime nor composite number.");
-  }
-
-  // check if number is greater than 1
-  else if (number > 1) {
-    // looping through 2 to number/2
+  } else if (number > 1) {
     for (let i = 2; i <= number / 2; i++) {
       if (number % i == 0) {
         isPrime = false;
@@ -128,12 +120,31 @@ function checkPrimeNumber(number) {
     } else {
       console.log(`${number} is a not prime number`);
     }
-  }
-
-  // check if number is less than 1
-  else {
+  } else {
     console.log("The number is not a prime number.");
   }
+
+  return isPrime;
 }
 
 console.log(checkPrimeNumber(7));
+
+// Fibonacci Sequence
+
+function fibonacciSequence(number) {
+  let n1 = 0,
+    n2 = 1,
+    nextTerm;
+
+  console.log("Fibonacci Series:");
+
+  for (let i = 1; i <= number; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+  }
+  return `Fibonacci Sequence of ${number}`;
+}
+
+console.log(fibonacciSequence(4));
